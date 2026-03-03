@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.esewa_android_app.utils.DialogHelper
+import com.example.esewa_android_app.utils.UuidHelper
 import com.google.android.material.textfield.TextInputLayout
 import java.util.regex.Pattern
 import kotlin.text.Typography.bullet
@@ -55,18 +56,23 @@ class LoginActivity : AppCompatActivity() {
         })
 
         loginButton.setOnClickListener {
-
-            if (checkUsernameAndPassword(
-                    usernameInputLayout,
-                    passwordInputLayout,
-                    username,
-                    password
-                )
-            ) {
-                Log.d(null, "Valid username and password")
+            val savedUuid = UuidHelper.getSavedUuid(this)
+            if (savedUuid.isNullOrEmpty()) {
+                if (checkUsernameAndPassword(
+                        usernameInputLayout,
+                        passwordInputLayout,
+                        username,
+                        password
+                    )
+                ) {
+                    Log.d(null, "Valid username and password")
+                    UuidHelper.generateAndSaveRandomUuidInSharedPreference(this)
+                }
             } else {
-                Log.d(null, "Invalid username and password")
+                // start flutter activity
+                Log.d(null, "starting flutter activity")
             }
+
         }
     }
 
@@ -81,7 +87,7 @@ class LoginActivity : AppCompatActivity() {
         if (usernameText.isEmpty()) {
             usernameInputLayout.error = getString(R.string.requiredUsernameValidationMessage)
             return false
-        } else if (!(usernameText.matches("[a-zA-Z0-9]+".toRegex()))) {
+        } else if (!(usernameText.matches("[a-zA-Z0-9 ]+".toRegex()))) {
             usernameInputLayout.error = getString(R.string.invalidUsernameValidationMessage)
             return false
         } else if (usernameText.length !in 3..20) {
