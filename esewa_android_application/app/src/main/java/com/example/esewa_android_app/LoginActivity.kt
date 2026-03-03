@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.esewa_android_app.utils.DialogHelper
 import com.google.android.material.textfield.TextInputLayout
 import java.util.regex.Pattern
 import kotlin.text.Typography.bullet
@@ -102,6 +103,10 @@ class LoginActivity : AppCompatActivity() {
             return false
         }
 
+        if (usernameText != "Demo Esewa User" && passwordText != "esewa2026@Demo") {
+            DialogHelper.showAlertDialog(this)
+            return false
+        }
         return true
     }
 
