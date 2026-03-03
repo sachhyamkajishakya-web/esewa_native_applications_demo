@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6273A7C8B3D6753DB8C3CC5B /* Pods_esewa_ios_app_esewa_ios_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB8E8D9E976A5FFEFB23E9E /* Pods_esewa_ios_app_esewa_ios_appUITests.framework */; };
+		708382011FBAD94997ED68DF /* Pods_esewa_ios_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB5746FC1476DBAC7FBFB93 /* Pods_esewa_ios_appTests.framework */; };
+		E1ADE152C79D5ABE2E78B163 /* Pods_esewa_ios_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDBFD2D0926831000ED3AFD /* Pods_esewa_ios_app.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A63FC422F56EB5000AE0780 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A63FC2A2F56EB4F00AE0780 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A63FC312F56EB4F00AE0780;
+			remoteInfo = esewa_ios_app;
+		};
+		2A63FC4C2F56EB5000AE0780 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A63FC2A2F56EB4F00AE0780 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A63FC312F56EB4F00AE0780;
+			remoteInfo = esewa_ios_app;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1405A287CB20DB6F7AD287AA /* Pods-esewa_ios_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esewa_ios_app.debug.xcconfig"; path = "Target Support Files/Pods-esewa_ios_app/Pods-esewa_ios_app.debug.xcconfig"; sourceTree = "<group>"; };
+		2A63FC322F56EB4F00AE0780 /* esewa_ios_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = esewa_ios_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A63FC412F56EB5000AE0780 /* esewa_ios_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = esewa_ios_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A63FC4B2F56EB5000AE0780 /* esewa_ios_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = esewa_ios_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FCCAB9E407CEC36DE256D9 /* Pods-esewa_ios_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esewa_ios_appTests.release.xcconfig"; path = "Target Support Files/Pods-esewa_ios_appTests/Pods-esewa_ios_appTests.release.xcconfig"; sourceTree = "<group>"; };
+		688B4A2852A9EF6E6FBD1A28 /* Pods-esewa_ios_app-esewa_ios_appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esewa_ios_app-esewa_ios_appUITests.release.xcconfig"; path = "Target Support Files/Pods-esewa_ios_app-esewa_ios_appUITests/Pods-esewa_ios_app-esewa_ios_appUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7DB8E8D9E976A5FFEFB23E9E /* Pods_esewa_ios_app_esewa_ios_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_esewa_ios_app_esewa_ios_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8953A3103593D7CFCAB06D4A /* Pods-esewa_ios_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esewa_ios_appTests.debug.xcconfig"; path = "Target Support Files/Pods-esewa_ios_appTests/Pods-esewa_ios_appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8DDBFD2D0926831000ED3AFD /* Pods_esewa_ios_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_esewa_ios_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922D47CC090FFF015C024E41 /* Pods-esewa_ios_app-esewa_ios_appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esewa_ios_app-esewa_ios_appUITests.debug.xcconfig"; path = "Target Support Files/Pods-esewa_ios_app-esewa_ios_appUITests/Pods-esewa_ios_app-esewa_ios_appUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFB5746FC1476DBAC7FBFB93 /* Pods_esewa_ios_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_esewa_ios_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F363736F9FFA6034ADEC1A4D /* Pods-esewa_ios_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-esewa_ios_app.release.xcconfig"; path = "Target Support Files/Pods-esewa_ios_app/Pods-esewa_ios_app.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2A63FC342F56EB4F00AE0780 /* esewa_ios_app */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = esewa_ios_app;
+			sourceTree = "<group>";
+		};
+		2A63FC442F56EB5000AE0780 /* esewa_ios_appTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = esewa_ios_appTests;
+			sourceTree = "<group>";
+		};
+		2A63FC4E2F56EB5000AE0780 /* esewa_ios_appUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = esewa_ios_appUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A63FC2F2F56EB4F00AE0780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1ADE152C79D5ABE2E78B163 /* Pods_esewa_ios_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A63FC3E2F56EB5000AE0780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708382011FBAD94997ED68DF /* Pods_esewa_ios_appTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A63FC482F56EB5000AE0780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6273A7C8B3D6753DB8C3CC5B /* Pods_esewa_ios_app_esewa_ios_appUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B3B1B82EF80A2E5B2A180F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1405A287CB20DB6F7AD287AA /* Pods-esewa_ios_app.debug.xcconfig */,
+				F363736F9FFA6034ADEC1A4D /* Pods-esewa_ios_app.release.xcconfig */,
+				922D47CC090FFF015C024E41 /* Pods-esewa_ios_app-esewa_ios_appUITests.debug.xcconfig */,
+				688B4A2852A9EF6E6FBD1A28 /* Pods-esewa_ios_app-esewa_ios_appUITests.release.xcconfig */,
+				8953A3103593D7CFCAB06D4A /* Pods-esewa_ios_appTests.debug.xcconfig */,
+				52FCCAB9E407CEC36DE256D9 /* Pods-esewa_ios_appTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2A63FC292F56EB4F00AE0780 = {
+			isa = PBXGroup;
+			children = (
+				2A63FC342F56EB4F00AE0780 /* esewa_ios_app */,
+				2A63FC442F56EB5000AE0780 /* esewa_ios_appTests */,
+				2A63FC4E2F56EB5000AE0780 /* esewa_ios_appUITests */,
+				2A63FC332F56EB4F00AE0780 /* Products */,
+				1B3B1B82EF80A2E5B2A180F2 /* Pods */,
+				FD0022176A3CE8D7014D1EEE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2A63FC332F56EB4F00AE0780 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A63FC322F56EB4F00AE0780 /* esewa_ios_app.app */,
+				2A63FC412F56EB5000AE0780 /* esewa_ios_appTests.xctest */,
+				2A63FC4B2F56EB5000AE0780 /* esewa_ios_appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD0022176A3CE8D7014D1EEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBFD2D0926831000ED3AFD /* Pods_esewa_ios_app.framework */,
+				7DB8E8D9E976A5FFEFB23E9E /* Pods_esewa_ios_app_esewa_ios_appUITests.framework */,
+				AFB5746FC1476DBAC7FBFB93 /* Pods_esewa_ios_appTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A63FC312F56EB4F00AE0780 /* esewa_ios_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A63FC552F56EB5000AE0780 /* Build configuration list for PBXNativeTarget "esewa_ios_app" */;
+			buildPhases = (
+				DE6ABC44713BB339055CA5F3 /* [CP] Check Pods Manifest.lock */,
+				4B306E36DD38A5D391877243 /* [CP-User] Run Flutter Build esewa_flutter_module Script */,
+				2A63FC2E2F56EB4F00AE0780 /* Sources */,
+				2A63FC2F2F56EB4F00AE0780 /* Frameworks */,
+				2A63FC302F56EB4F00AE0780 /* Resources */,
+				7561967A1028D21263071921 /* [CP-User] Embed Flutter Build esewa_flutter_module Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2A63FC342F56EB4F00AE0780 /* esewa_ios_app */,
+			);
+			name = esewa_ios_app;
+			productName = esewa_ios_app;
+			productReference = 2A63FC322F56EB4F00AE0780 /* esewa_ios_app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A63FC402F56EB5000AE0780 /* esewa_ios_appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A63FC582F56EB5000AE0780 /* Build configuration list for PBXNativeTarget "esewa_ios_appTests" */;
+			buildPhases = (
+				70E9143659B23DA19CB5DAF0 /* [CP] Check Pods Manifest.lock */,
+				2A63FC3D2F56EB5000AE0780 /* Sources */,
+				2A63FC3E2F56EB5000AE0780 /* Frameworks */,
+				2A63FC3F2F56EB5000AE0780 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A63FC432F56EB5000AE0780 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2A63FC442F56EB5000AE0780 /* esewa_ios_appTests */,
+			);
+			name = esewa_ios_appTests;
+			productName = esewa_ios_appTests;
+			productReference = 2A63FC412F56EB5000AE0780 /* esewa_ios_appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2A63FC4A2F56EB5000AE0780 /* esewa_ios_appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A63FC5B2F56EB5000AE0780 /* Build configuration list for PBXNativeTarget "esewa_ios_appUITests" */;
+			buildPhases = (
+				3EF8456604E8F44CA89466D7 /* [CP] Check Pods Manifest.lock */,
+				2A63FC472F56EB5000AE0780 /* Sources */,
+				2A63FC482F56EB5000AE0780 /* Frameworks */,
+				2A63FC492F56EB5000AE0780 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A63FC4D2F56EB5000AE0780 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2A63FC4E2F56EB5000AE0780 /* esewa_ios_appUITests */,
+			);
+			name = esewa_ios_appUITests;
+			productName = esewa_ios_appUITests;
+			productReference = 2A63FC4B2F56EB5000AE0780 /* esewa_ios_appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A63FC2A2F56EB4F00AE0780 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					2A63FC312F56EB4F00AE0780 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					2A63FC402F56EB5000AE0780 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 2A63FC312F56EB4F00AE0780;
+					};
+					2A63FC4A2F56EB5000AE0780 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 2A63FC312F56EB4F00AE0780;
+					};
+				};
+			};
+			buildConfigurationList = 2A63FC2D2F56EB4F00AE0780 /* Build configuration list for PBXProject "esewa_ios_app" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A63FC292F56EB4F00AE0780;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2A63FC332F56EB4F00AE0780 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A63FC312F56EB4F00AE0780 /* esewa_ios_app */,
+				2A63FC402F56EB5000AE0780 /* esewa_ios_appTests */,
+				2A63FC4A2F56EB5000AE0780 /* esewa_ios_appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A63FC302F56EB4F00AE0780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A63FC3F2F56EB5000AE0780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A63FC492F56EB5000AE0780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EF8456604E8F44CA89466D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-esewa_ios_app-esewa_ios_appUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B306E36DD38A5D391877243 /* [CP-User] Run Flutter Build esewa_flutter_module Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] Run Flutter Build esewa_flutter_module Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../../esewa_flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		70E9143659B23DA19CB5DAF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-esewa_ios_appTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7561967A1028D21263071921 /* [CP-User] Embed Flutter Build esewa_flutter_module Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] Embed Flutter Build esewa_flutter_module Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../../esewa_flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+		DE6ABC44713BB339055CA5F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-esewa_ios_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A63FC2E2F56EB4F00AE0780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A63FC3D2F56EB5000AE0780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A63FC472F56EB5000AE0780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A63FC432F56EB5000AE0780 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A63FC312F56EB4F00AE0780 /* esewa_ios_app */;
+			targetProxy = 2A63FC422F56EB5000AE0780 /* PBXContainerItemProxy */;
+		};
+		2A63FC4D2F56EB5000AE0780 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A63FC312F56EB4F00AE0780 /* esewa_ios_app */;
+			targetProxy = 2A63FC4C2F56EB5000AE0780 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A63FC532F56EB5000AE0780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A63FC542F56EB5000AE0780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2A63FC562F56EB5000AE0780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1405A287CB20DB6F7AD287AA /* Pods-esewa_ios_app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "learnIos.esewa-ios-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		2A63FC572F56EB5000AE0780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F363736F9FFA6034ADEC1A4D /* Pods-esewa_ios_app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "learnIos.esewa-ios-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		2A63FC592F56EB5000AE0780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8953A3103593D7CFCAB06D4A /* Pods-esewa_ios_appTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "learnIos.esewa-ios-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/esewa_ios_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/esewa_ios_app";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		2A63FC5A2F56EB5000AE0780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52FCCAB9E407CEC36DE256D9 /* Pods-esewa_ios_appTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "learnIos.esewa-ios-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/esewa_ios_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/esewa_ios_app";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		2A63FC5C2F56EB5000AE0780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 922D47CC090FFF015C024E41 /* Pods-esewa_ios_app-esewa_ios_appUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "learnIos.esewa-ios-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = esewa_ios_app;
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		2A63FC5D2F56EB5000AE0780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 688B4A2852A9EF6E6FBD1A28 /* Pods-esewa_ios_app-esewa_ios_appUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2VH7MNYXC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "learnIos.esewa-ios-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = esewa_ios_app;
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A63FC2D2F56EB4F00AE0780 /* Build configuration list for PBXProject "esewa_ios_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A63FC532F56EB5000AE0780 /* Debug */,
+				2A63FC542F56EB5000AE0780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A63FC552F56EB5000AE0780 /* Build configuration list for PBXNativeTarget "esewa_ios_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A63FC562F56EB5000AE0780 /* Debug */,
+				2A63FC572F56EB5000AE0780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A63FC582F56EB5000AE0780 /* Build configuration list for PBXNativeTarget "esewa_ios_appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A63FC592F56EB5000AE0780 /* Debug */,
+				2A63FC5A2F56EB5000AE0780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A63FC5B2F56EB5000AE0780 /* Build configuration list for PBXNativeTarget "esewa_ios_appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A63FC5C2F56EB5000AE0780 /* Debug */,
+				2A63FC5D2F56EB5000AE0780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A63FC2A2F56EB4F00AE0780 /* Project object */;
+}
