@@ -3,4 +3,9 @@
     <string name="login">Login</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="invalidPasswordErrorMessage">Password must contain\n %1$c1 digit\n %2$c1 lowercase\n %3$c1 uppercase\n %4$c1 special character\n %5$cat least 8 characters</string>
+    <string name="requiredPasswordValidationMessage">Password is required.</string>
+    <string name="invalidUsernameValidationMessage">Username must only contain characters and numbers.</string>
+    <string name="requiredUsernameValidationMessage">Username is required.</string>
+    <string name="usernameLengthValidationMessage">Username must be 3 to 20 characters long.</string>
 </resources>
