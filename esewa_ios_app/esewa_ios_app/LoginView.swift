@@ -15,6 +15,9 @@ struct LoginView: View {
     @State private var passwordErrorMessage: String = ""
     @FocusState private var isUsernameFieldFocused: Bool
     @FocusState private var isPasswordFieldFocused: Bool
+    @State private var showAlert = false
+//    using persistent storage to store generated UUID
+    @AppStorage("userUUID") var uuid: String = ""
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             Text("Login").font(.system(size: 40)).fontWeight(.bold).padding(.bottom, 50)
@@ -24,6 +27,9 @@ struct LoginView: View {
                     RoundedRectangle(cornerRadius: 3)
                         .stroke(Color(isUsernameFieldFocused ? "primary" : "borderColor"), lineWidth: 1)
                 )
+                .onChange(of: username) { _, _ in
+                    usernameErrorMessage = ""
+                }
                 .textInputAutocapitalization(.never)
                 .tint(Color("primary"))
                 .focused($isUsernameFieldFocused)
@@ -39,6 +45,9 @@ struct LoginView: View {
                     RoundedRectangle(cornerRadius: 3)
                         .stroke(Color(isUsernameFieldFocused ? "primary" : "borderColor"), lineWidth: 1)
                 )
+                .onChange(of: password) { _, _ in
+                    passwordErrorMessage = ""
+                }
                 .textInputAutocapitalization(.never)
                 .tint(Color("primary"))
                 .focused($isPasswordFieldFocused)
@@ -50,7 +59,8 @@ struct LoginView: View {
             }
             Button {
                 if checkUsernameAndPassword() {
-                    print("Valid username and password")
+                    uuid = UUID().uuidString
+                    print("Valid username and password \(uuid)")
                 } else {
                     print("invalid username nad password")
                 }
@@ -59,7 +69,12 @@ struct LoginView: View {
                 Text("Login").foregroundStyle(Color("buttonTextColor")).padding(.all, 10)
 
             }.buttonStyle(.borderedProminent)
-                .padding(.top, 20).tint(Color("primary"))
+                .padding(.top, 20).tint(Color("primary")).alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Error"),
+                        message: Text("Invalid username and password.")
+                    )
+                }
         }
         .padding(.horizontal)
         .frame(maxWidth: .infinity)
@@ -85,6 +100,7 @@ struct LoginView: View {
         }
 
         if username.trimmingCharacters(in: .whitespaces) != "Demo Esewa User" && password.trimmingCharacters(in: .whitespaces) != "esewa2026@Demo" {
+            showAlert = true
             return false
         }
         return true

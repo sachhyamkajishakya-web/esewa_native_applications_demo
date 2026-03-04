@@ -5,11 +5,12 @@
 //  Created by Sachhyam Kaji Shakya on 03/03/2026.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct esewa_ios_appApp: App {
+    @AppStorage("userUUID") var uuid: String?
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -25,7 +26,12 @@ struct esewa_ios_appApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if uuid != nil {
+                LoginView()
+            } else {
+                //                start flutter view
+                LoginView()
+            }
         }
         .modelContainer(sharedModelContainer)
     }
