@@ -82,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
         username: EditText,
         password: EditText
     ): Boolean {
-        val usernameText = username.text.toString()
+        val usernameText = username.text.toString().trim()
         val passwordText = password.text.toString()
         if (usernameText.isEmpty()) {
             usernameInputLayout.error = getString(R.string.requiredUsernameValidationMessage)
