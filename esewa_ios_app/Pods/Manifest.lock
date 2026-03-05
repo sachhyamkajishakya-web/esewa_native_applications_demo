@@ -1,21 +1,28 @@
 PODS:
+  - connectivity_plus (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - FlutterPluginRegistrant (0.0.1):
+    - connectivity_plus
     - Flutter
 
 DEPENDENCIES:
+  - connectivity_plus (from `../../esewa_flutter_module/.ios/.symlinks/plugins/connectivity_plus/ios`)
   - Flutter (from `../../esewa_flutter_module/.ios/Flutter`)
   - FlutterPluginRegistrant (from `../../esewa_flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
 
 EXTERNAL SOURCES:
+  connectivity_plus:
+    :path: "../../esewa_flutter_module/.ios/.symlinks/plugins/connectivity_plus/ios"
   Flutter:
     :path: "../../esewa_flutter_module/.ios/Flutter"
   FlutterPluginRegistrant:
     :path: "../../esewa_flutter_module/.ios/Flutter/FlutterPluginRegistrant"
 
 SPEC CHECKSUMS:
+  connectivity_plus: cb623214f4e1f6ef8fe7403d580fdad517d2f7dd
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
-  FlutterPluginRegistrant: 1bf2b93dcc6a731089dfe77f7a867be153c5008f
+  FlutterPluginRegistrant: f4e0033059709c0f7fb4ecb1f7b0b072f773115d
 
 PODFILE CHECKSUM: 4d776f573dc5719ef1d0d230efc916ef37141aeb
 

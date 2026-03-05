@@ -25,13 +25,13 @@ struct LoginView: View {
                 .padding(6)
                 .overlay(
                     RoundedRectangle(cornerRadius: 3)
-                        .stroke(Color(isUsernameFieldFocused ? "primary" : "borderColor"), lineWidth: 1)
+                        .stroke(Color(isUsernameFieldFocused ? "borderColor" : "unfocusedBorderColor"), lineWidth: 1)
                 )
                 .onChange(of: username) { _, _ in
                     usernameErrorMessage = ""
                 }
                 .textInputAutocapitalization(.never)
-                .tint(Color("primary"))
+                .tint(Color("borderColor"))
                 .focused($isUsernameFieldFocused)
             if !usernameErrorMessage.isEmpty {
                 Text(usernameErrorMessage)
@@ -43,13 +43,13 @@ struct LoginView: View {
                 .padding(6)
                 .overlay(
                     RoundedRectangle(cornerRadius: 3)
-                        .stroke(Color(isUsernameFieldFocused ? "primary" : "borderColor"), lineWidth: 1)
+                        .stroke(Color(isPasswordFieldFocused ? "borderColor" : "unfocusedBorderColor"), lineWidth: 1)
                 )
                 .onChange(of: password) { _, _ in
                     passwordErrorMessage = ""
                 }
                 .textInputAutocapitalization(.never)
-                .tint(Color("primary"))
+                .tint(Color("borderColor"))
                 .focused($isPasswordFieldFocused)
             if !passwordErrorMessage.isEmpty {
                 Text(passwordErrorMessage)
@@ -66,7 +66,7 @@ struct LoginView: View {
                 }
 
             } label: {
-                Text("Login").foregroundStyle(Color("buttonTextColor")).padding(.all, 10)
+                Text("Login").foregroundStyle(Color("buttonTextColor")).padding(.all, 10).font(.system(size: 18)).fontWeight(.bold)
 
             }.buttonStyle(.borderedProminent)
                 .padding(.top, 20).tint(Color("primary")).alert(isPresented: $showAlert) {
@@ -74,10 +74,9 @@ struct LoginView: View {
                         title: Text("Error"),
                         message: Text("Invalid username and password.")
                     )
-                }
+                }.frame(width: 200, height: 52)
         }
         .padding(.horizontal)
-        .frame(maxWidth: .infinity)
     }
 
     func checkUsernameAndPassword() -> Bool {
