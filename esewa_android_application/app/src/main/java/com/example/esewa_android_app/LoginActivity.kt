@@ -4,8 +4,12 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.esewa_android_app.utils.DialogHelper
 import com.example.esewa_android_app.utils.UuidHelper
 import com.google.android.material.textfield.TextInputLayout
+import io.flutter.embedding.android.FlutterActivity
 import java.util.regex.Pattern
 import kotlin.text.Typography.bullet
 
@@ -31,7 +36,9 @@ class LoginActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.password)
         val usernameInputLayout = findViewById<TextInputLayout>(R.id.usernameInputLayout)
         val passwordInputLayout = findViewById<TextInputLayout>(R.id.passwordInputLayout)
-        val loginButton = findViewById<Button>(R.id.login_button)
+        val loginButton = findViewById<RelativeLayout>(R.id.login_button_container)
+        val loginButtonText = findViewById<TextView>(R.id.login_button_text)
+        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
         //  remove the error message when username is being changed
         username.addTextChangedListener(object : TextWatcher {
@@ -56,23 +63,32 @@ class LoginActivity : AppCompatActivity() {
         })
 
         loginButton.setOnClickListener {
-            val savedUuid = UuidHelper.getSavedUuid(this)
-            if (savedUuid.isNullOrEmpty()) {
-                if (checkUsernameAndPassword(
-                        usernameInputLayout,
-                        passwordInputLayout,
-                        username,
-                        password
-                    )
-                ) {
-                    Log.d(null, "Valid username and password")
-                    UuidHelper.generateAndSaveRandomUuidInSharedPreference(this)
-                }
-            } else {
-                // start flutter activity
-                Log.d(null, "starting flutter activity")
-            }
+            if (checkUsernameAndPassword(
+                    usernameInputLayout,
+                    passwordInputLayout,
+                    username,
+                    password
+                )
+            ) {
+                // ✅ show loader inside button
+                loginButtonText.visibility = View.GONE
+                progressBar.visibility = View.VISIBLE
+                loginButton.isClickable = false
 
+                UuidHelper.generateAndSaveRandomUuidInSharedPreference(this)
+
+                loginButton.postDelayed({
+                    startActivity(
+                        FlutterActivity
+                            .withCachedEngine("android_flutter_engine")
+                            .build(this)
+                    )
+                    // ✅ reset button state
+                    loginButtonText.visibility = View.VISIBLE
+                    progressBar.visibility = View.GONE
+                    loginButton.isClickable = true
+                }, 600)
+            }
         }
     }
 

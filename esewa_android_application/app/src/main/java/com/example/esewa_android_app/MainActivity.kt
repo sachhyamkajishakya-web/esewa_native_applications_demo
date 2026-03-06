@@ -1,10 +1,19 @@
 package com.example.esewa_android_app
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.esewa_android_app.utils.UuidHelper
+import com.getkeepsafe.relinker.BuildConfig
+import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.FlutterEngineCache
+import io.flutter.embedding.engine.dart.DartExecutor
+import io.flutter.plugin.common.MethodChannel
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +24,49 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        // create and warm up the flutter engine
+        val flutterEngine = FlutterEngine(this)
+        flutterEngine.dartExecutor.executeDartEntrypoint(
+            DartExecutor.DartEntrypoint.createDefault()
+        )
+
+        MethodChannel(
+            flutterEngine.dartExecutor.binaryMessenger,
+            "com.example.esewa/config"
+        ).setMethodCallHandler { call, result ->
+            if (call.method == "getConfig") {
+                result.success(
+                    mapOf(
+                        "uuid" to UuidHelper.getSavedUuid(this),
+                        "platform" to "android",
+                        "environment" to "develop"
+                    )
+                )
+            } else {
+                result.notImplemented()
+            }
+        }
+
+        // cache the engine so any activity can use it
+        FlutterEngineCache
+            .getInstance()
+            .put("android_flutter_engine", flutterEngine)
+
+        val savedUuid = UuidHelper.getSavedUuid(this)
+        // simple navigation
+        if (savedUuid.isNullOrEmpty()) {
+            // navigate and clear back stack (can't go back)
+            startActivity(Intent(this, LoginActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            })
+        } else {
+            startActivity(
+                FlutterActivity
+                    .withCachedEngine("android_flutter_engine")
+                    .build(this)
+            )
         }
     }
 }
