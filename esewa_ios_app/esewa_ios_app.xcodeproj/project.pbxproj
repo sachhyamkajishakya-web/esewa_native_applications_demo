@@ -47,22 +47,16 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2A63FC342F56EB4F00AE0780 /* esewa_ios_app */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = esewa_ios_app;
 			sourceTree = "<group>";
 		};
 		2A63FC442F56EB5000AE0780 /* esewa_ios_appTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = esewa_ios_appTests;
 			sourceTree = "<group>";
 		};
 		2A63FC4E2F56EB5000AE0780 /* esewa_ios_appUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = esewa_ios_appUITests;
 			sourceTree = "<group>";
 		};
@@ -309,7 +303,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
 			name = "[CP-User] Run Flutter Build esewa_flutter_module Script";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../../esewa_flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
@@ -341,7 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
 			name = "[CP-User] Embed Flutter Build esewa_flutter_module Script";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../../esewa_flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
@@ -354,9 +356,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-esewa_ios_app/Pods-esewa_ios_app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-esewa_ios_app/Pods-esewa_ios_app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -371,9 +377,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-esewa_ios_app-esewa_ios_appUITests/Pods-esewa_ios_app-esewa_ios_appUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-esewa_ios_app-esewa_ios_appUITests/Pods-esewa_ios_app-esewa_ios_appUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

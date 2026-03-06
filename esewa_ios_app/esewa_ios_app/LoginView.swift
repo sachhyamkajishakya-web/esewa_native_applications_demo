@@ -16,6 +16,10 @@ struct LoginView: View {
     @FocusState private var isUsernameFieldFocused: Bool
     @FocusState private var isPasswordFieldFocused: Bool
     @State private var showAlert = false
+    @State private var bridge: MethodChannelBridge?
+    @State private var showFlutter = false
+
+    let engineManager = FlutterEngineManager.shared
 //    using persistent storage to store generated UUID
     @AppStorage("userUUID") var uuid: String = ""
     var body: some View {
@@ -61,22 +65,42 @@ struct LoginView: View {
                 if checkUsernameAndPassword() {
                     uuid = UUID().uuidString
                     print("Valid username and password \(uuid)")
+
+                    // ✅ boot engine only now
+                    engineManager.start()
+
+                    engineManager.bridge?.pendingConfig = [
+                        "uuid": uuid,
+                        "platform": "ios",
+                        "environment": "develop"
+                    ]
+                    showFlutter = true
                 } else {
                     print("invalid username nad password")
                 }
 
             } label: {
-                Text("Login").foregroundStyle(Color("buttonTextColor")).padding(.all, 10).font(.system(size: 18)).fontWeight(.bold)
+                Text("Login")
+                    .foregroundStyle(Color("buttonTextColor"))
+                    .padding(.all, 10)
+                    .font(.system(size: 18))
+                    .fontWeight(.bold)
 
             }.buttonStyle(.borderedProminent)
-                .padding(.top, 20).tint(Color("primary")).alert(isPresented: $showAlert) {
+                .padding(.top, 20)
+                .tint(Color("primary"))
+                .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Error"),
                         message: Text("Invalid username and password.")
                     )
-                }.frame(width: 200, height: 52)
+                }
+                .frame(width: 200, height: 52)
         }
         .padding(.horizontal)
+        .fullScreenCover(isPresented: $showFlutter) {
+            FlutterViewControllerWrapper(engine: engineManager.flutterEngine)
+        }
     }
 
     func checkUsernameAndPassword() -> Bool {
