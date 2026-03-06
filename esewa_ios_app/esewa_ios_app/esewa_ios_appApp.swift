@@ -11,10 +11,12 @@ import SwiftUI
 @main
 struct esewa_ios_appApp: App {
     @AppStorage("userUUID") var uuid: String?
+    let engineManager = FlutterEngineManager.shared
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
         ])
+
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
@@ -27,9 +29,9 @@ struct esewa_ios_appApp: App {
     var body: some Scene {
         WindowGroup {
             if uuid != nil {
-                LoginView()
+                //  start flutter view
+                FlutterLaunchView(uuid: uuid)
             } else {
-                //                start flutter view
                 LoginView()
             }
         }
