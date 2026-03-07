@@ -42,36 +42,43 @@ class MainActivity : AppCompatActivity() {
             flutterEngine.dartExecutor.binaryMessenger,
             "com.example.esewa/config"
         ).setMethodCallHandler { call, result ->
-            if (call.method == "getConfig") {
-                result.success(
-                    mapOf(
-                        "uuid" to UuidHelper.getSavedUuid(this),
-                        "platform" to "android",
-                        "environment" to "develop"
+            when (call.method) {
+                "getConfig" -> {
+                    result.success(
+                        mapOf(
+                            "uuid" to UuidHelper.getSavedUuid(this),
+                            "platform" to "android",
+                            "environment" to "develop"
+                        )
                     )
-                )
-            } else if (call.method == "selectedItem") {
-                val rawArgs = call.arguments
-                if (rawArgs is Map<*, *>) {
-                    val item = rawArgs.entries.associate {
-                        it.key.toString() to (it.value ?: "")
-                    }
-                    runOnUiThread {
-                        val intent = Intent(this, SelectedItemActivity::class.java).apply {
-                            putExtra("title", item["title"].toString())
-                            putExtra("category", item["category"].toString())
-                            putExtra("description", item["description"].toString())
-                            putExtra("price", item["price"].toString())
-                            putExtra("image", item["image"].toString())
-                            //  clear Flutter activity from back stack
-                            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-                        }
-                        startActivity(intent)
-                    }
                 }
-                result.success(null)
-            } else {
-                result.notImplemented()
+
+                "selectedItem" -> {
+                    val rawArgs = call.arguments
+                    if (rawArgs is Map<*, *>) {
+                        val item = rawArgs.entries.associate {
+                            it.key.toString() to (it.value ?: "")
+                        }
+                        runOnUiThread {
+                            val intent = Intent(this, SelectedItemActivity::class.java).apply {
+                                putExtra("title", item["title"].toString())
+                                putExtra("category", item["category"].toString())
+                                putExtra("description", item["description"].toString())
+                                putExtra("price", item["price"].toString())
+                                putExtra("image", item["image"].toString())
+                                //  clear Flutter activity from back stack
+                                flags =
+                                    Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                            }
+                            startActivity(intent)
+                        }
+                    }
+                    result.success(null)
+                }
+
+                else -> {
+                    result.notImplemented()
+                }
             }
         }
 

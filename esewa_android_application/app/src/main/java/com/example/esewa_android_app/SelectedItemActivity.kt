@@ -2,7 +2,6 @@ package com.example.esewa_android_app
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -19,9 +18,9 @@ class SelectedItemActivity : AppCompatActivity() {
         val price = intent.getStringExtra("price") ?: ""
         val image = intent.getStringExtra("image") ?: ""
 
-        findViewById<TextView>(R.id.itemTitle).text = "$title"
-        findViewById<TextView>(R.id.itemCategory).text = "$category"
-        findViewById<TextView>(R.id.itemDescription).text = "$description"
+        findViewById<TextView>(R.id.itemTitle).text = title
+        findViewById<TextView>(R.id.itemCategory).text = category
+        findViewById<TextView>(R.id.itemDescription).text = description
         findViewById<TextView>(R.id.itemPrice).text = "Total Price: $$price"
         val loginButton = findViewById<Button>(R.id.payButton)
 

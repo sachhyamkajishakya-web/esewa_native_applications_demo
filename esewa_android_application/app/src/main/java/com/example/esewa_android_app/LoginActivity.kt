@@ -3,9 +3,7 @@ package com.example.esewa_android_app
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
@@ -70,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
                     password
                 )
             ) {
-                // ✅ show loader inside button
+                // show loader inside button
                 loginButtonText.visibility = View.GONE
                 progressBar.visibility = View.VISIBLE
                 loginButton.isClickable = false
@@ -83,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
                             .withCachedEngine("android_flutter_engine")
                             .build(this)
                     )
-                    // ✅ reset button state
+                    // reset button state
                     loginButtonText.visibility = View.VISIBLE
                     progressBar.visibility = View.GONE
                     loginButton.isClickable = true
