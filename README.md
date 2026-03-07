@@ -12,19 +12,19 @@ Once you have all these pre-requisites setup, please make that you create direct
 
 **Note: Also make sure that the names and naming convention are exact for things to work smoothly.
 
-├── esewa_demo_app/
-  ├── esewa_native_applications/
-  ├── esewa_flutter_module/
+- esewa_demo_app (root)
+  - esewa_native_applications
+  - esewa_flutter_module
 **
 
 Clone this repository in the esewa_native_applications directory and clone the repository for flutter module within the esewa_flutter_module directory.
 Now you directory hierarchy should be something like this
 
-├── esewa_demo_app/
-  ├── esewa_native_application/
-      ├── esewa_android_application/
-      ├── esewa_ios_app/
-  ├── esewa_flutter_module/
+- esewa_demo_app(root)
+  - esewa_native_application/
+      - esewa_android_application/
+      - esewa_ios_app/
+  - esewa_flutter_module/
 
 Open the esewa_flutter_module in your system terminal and you must find env directory inside lib directory. Create three different files with names .env.dev, .env.stg and .env.prod
 
