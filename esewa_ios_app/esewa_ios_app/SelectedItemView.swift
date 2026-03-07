@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SelectedItemView: View {
     let item: [String: Any]
+    @State private var showAlert = false
 
     var body: some View {
         ScrollView {
@@ -57,7 +58,9 @@ struct SelectedItemView: View {
                     .fontWeight(.bold)
                 HStack {
                     Spacer()
-                    Button {} label: {
+                    Button {
+                        showAlert = true
+                    } label: {
                         Text("Pay")
                             .foregroundStyle(Color("buttonTextColor"))
                             .padding(.all, 10)
@@ -66,6 +69,12 @@ struct SelectedItemView: View {
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(.borderedProminent)
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Success"),
+                            message: Text("Payment Successful.")
+                        )
+                    }
                     .tint(Color("primary"))
                     .frame(height: 52)
 
