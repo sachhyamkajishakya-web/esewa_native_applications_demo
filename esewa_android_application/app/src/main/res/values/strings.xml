@@ -8,4 +8,7 @@
     <string name="invalidUsernameValidationMessage">Username must only contain characters and numbers.</string>
     <string name="requiredUsernameValidationMessage">Username is required.</string>
     <string name="usernameLengthValidationMessage">Username must be 3 to 20 characters long.</string>
+    <string name="product_category">Product Category</string>
+    <string name="product_description">Product Description</string>
+    <string name="item_description_image">item description image</string>
 </resources>

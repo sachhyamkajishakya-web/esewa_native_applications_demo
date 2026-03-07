@@ -17,4 +17,17 @@ object DialogHelper {
         dialog.show()
 
     }
+
+    fun paymentConfirmAlertDialog(context: Context) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Success")
+        builder.setMessage("Payment Successful!")
+        builder.setPositiveButton("OK") { dialog, which ->
+            dialog.cancel()
+        }
+        // Create and show the dialog
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+
+    }
 }

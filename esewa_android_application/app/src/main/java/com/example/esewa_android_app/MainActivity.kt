@@ -32,6 +32,12 @@ class MainActivity : AppCompatActivity() {
             DartExecutor.DartEntrypoint.createDefault()
         )
 
+
+        // cache the engine so any activity can use it
+        FlutterEngineCache
+            .getInstance()
+            .put("android_flutter_engine", flutterEngine)
+
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             "com.example.esewa/config"
@@ -44,15 +50,31 @@ class MainActivity : AppCompatActivity() {
                         "environment" to "develop"
                     )
                 )
+            } else if (call.method == "selectedItem") {
+                val rawArgs = call.arguments
+                if (rawArgs is Map<*, *>) {
+                    val item = rawArgs.entries.associate {
+                        it.key.toString() to (it.value ?: "")
+                    }
+                    runOnUiThread {
+                        val intent = Intent(this, SelectedItemActivity::class.java).apply {
+                            putExtra("title", item["title"].toString())
+                            putExtra("category", item["category"].toString())
+                            putExtra("description", item["description"].toString())
+                            putExtra("price", item["price"].toString())
+                            putExtra("image", item["image"].toString())
+                            //  clear Flutter activity from back stack
+                            flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                        }
+                        startActivity(intent)
+                    }
+                }
+                result.success(null)
             } else {
                 result.notImplemented()
             }
         }
 
-        // cache the engine so any activity can use it
-        FlutterEngineCache
-            .getInstance()
-            .put("android_flutter_engine", flutterEngine)
 
         val savedUuid = UuidHelper.getSavedUuid(this)
         // simple navigation
