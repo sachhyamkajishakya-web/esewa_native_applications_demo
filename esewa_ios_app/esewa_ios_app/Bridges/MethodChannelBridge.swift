@@ -12,6 +12,7 @@ class MethodChannelBridge {
 
     private let channel: FlutterMethodChannel
     var pendingConfig: [String: Any]?
+    var onItemSelected: (([String: Any]) -> Void)?
 
     init(engine: FlutterEngine) {
         channel = FlutterMethodChannel(
@@ -35,6 +36,14 @@ class MethodChannelBridge {
                     print("⚠️ pendingConfig is nil — config was not set before flutterReady!")
                 }
                 result(nil)
+
+            case "selectedItem": // ✅ handle item selection
+                if let item = call.arguments as? [String: Any] {
+                    print("📦 Item selected from Flutter: \(item)")
+                    self?.onItemSelected?(item)
+                }
+                result(nil)
+
             default:
                 result(FlutterMethodNotImplemented)
             }
