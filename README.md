@@ -36,7 +36,9 @@ Paste the same base url for all three files. Later on real application base url 
 After its done, run these commands in the given order.
 
 **flutter clean** -> this will clean all flutter caches
+
 **flutter pub get** -> run all depedencies from the pubspec.yaml and generate files required for native apps to create link with flutter
+
 **dart run build_runner build -d** -> generates all auto-generated file which is necessary for running the app module
 
 Now you move to the esewa_ios_app directory and run **pod install --repo-update**
@@ -46,4 +48,5 @@ Configure the run method and run the app from their respective IDE, the app shou
 Note: The username and password for logging in as static at the moment.
 
 **username - Esewa Demo User
+
 password - esewa2026@Demo**
