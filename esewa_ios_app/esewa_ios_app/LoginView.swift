@@ -66,7 +66,7 @@ struct LoginView: View {
                     uuid = UUID().uuidString
                     print("Valid username and password \(uuid)")
 
-                    // ✅ boot engine only now
+                    // boot engine only now
                     engineManager.start()
 
                     engineManager.bridge?.pendingConfig = [

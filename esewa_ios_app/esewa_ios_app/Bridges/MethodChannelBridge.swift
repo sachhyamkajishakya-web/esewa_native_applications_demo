@@ -23,23 +23,23 @@ class MethodChannelBridge {
     }
 
     private func setupHandlers() {
-        print("4️⃣ Handler registered, waiting for flutterReady...")
+        print("Handler registered, waiting for flutterReady...")
         channel.setMethodCallHandler { [weak self] call, result in
-            print("5️⃣ Received call: \(call.method)")
+            print("Received call: \(call.method)")
             switch call.method {
             case "flutterReady":
-                print("6️⃣ Flutter is ready! pendingConfig: \(String(describing: self?.pendingConfig))")
+                print("Flutter is ready! pendingConfig: \(String(describing: self?.pendingConfig))")
                 if let config = self?.pendingConfig {
                     self?.sendDataToFlutter(method: "appConfig", arguments: config)
                     self?.pendingConfig = nil
                 } else {
-                    print("⚠️ pendingConfig is nil — config was not set before flutterReady!")
+                    print("pendingConfig is nil — config was not set before flutterReady!")
                 }
                 result(nil)
 
-            case "selectedItem": // ✅ handle item selection
+            case "selectedItem": // handle item selection
                 if let item = call.arguments as? [String: Any] {
-                    print("📦 Item selected from Flutter: \(item)")
+                    print("Item selected from Flutter: \(item)")
                     self?.onItemSelected?(item)
                 }
                 result(nil)
@@ -51,14 +51,14 @@ class MethodChannelBridge {
     }
 
     func sendDataToFlutter(method: String, arguments: Any?) {
-        print("7️⃣ Sending to Flutter — method: \(method), args: \(String(describing: arguments))")
+        print("Sending to Flutter — method: \(method), args: \(String(describing: arguments))")
         channel.invokeMethod(method, arguments: arguments) { result in
             if let error = result as? FlutterError {
-                print("❌ Flutter error: \(error.message ?? "unknown")")
+                print("Flutter error: \(error.message ?? "unknown")")
             } else if FlutterMethodNotImplemented.isEqual(result) {
-                print("❌ Method not implemented in Flutter")
+                print("Method not implemented in Flutter")
             } else {
-                print("✅ Flutter responded: \(String(describing: result))")
+                print("Flutter responded: \(String(describing: result))")
             }
         }
     }

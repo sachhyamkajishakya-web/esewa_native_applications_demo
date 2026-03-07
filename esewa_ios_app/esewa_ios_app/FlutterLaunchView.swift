@@ -17,10 +17,10 @@ struct FlutterLaunchView: View {
     var body: some View {
         Group {
             if showNativeDetail, let item = selectedItem {
-                // ✅ native screen with selected item
+                // native screen with selected item
                 SelectedItemView(item: item)
             } else if engineReady {
-                // ✅ only create wrapper after engine is running
+                // only create wrapper after engine is running
                 FlutterViewControllerWrapper(engine: engineManager.flutterEngine)
                     .ignoresSafeArea()
             } else {
@@ -39,17 +39,17 @@ struct FlutterLaunchView: View {
             }
         }
         .onAppear {
-            // ✅ start engine first
+            // start engine first
             engineManager.start()
 
-            // ✅ set config
+            // set config
             engineManager.bridge?.pendingConfig = [
                 "uuid": uuid as Any,
                 "platform": "ios",
                 "environment": "develop"
             ]
 
-            // ✅ listen for item selection from Flutter
+            // listen for item selection from Flutter
             engineManager.bridge?.onItemSelected = { item in
                 DispatchQueue.main.async {
                     self.selectedItem = item
@@ -57,7 +57,7 @@ struct FlutterLaunchView: View {
                 }
             }
 
-            // ✅ now safe to show Flutter view
+            // now safe to show Flutter view
             engineReady = true
         }
     }
