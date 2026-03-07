@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.esewa_android_app"
-    compileSdk =35
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.esewa_android_app"
@@ -47,4 +47,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.github.bumptech.glide:glide:5.0.5")
 }
